@@ -1,0 +1,32 @@
+﻿@model IEnumerable<UniversityApp.Domain.Entities.Student>
+<a asp-action="Create">Create New Student</a>
+
+<br />
+<br />
+<h1>Students</h1>
+
+<table border="1" cellpadding="8">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>University</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Id</td>
+                <td>@student.Name</td>
+                <td>@student.Age</td>
+                <td>@student.Email</td>
+                <td>@student.University?.Name</td>
+            </tr>
+        }
+    </tbody>
+
+</table>

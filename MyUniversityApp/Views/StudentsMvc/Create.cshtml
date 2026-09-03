@@ -1,0 +1,41 @@
+﻿@model UniversityApp.Application.DTOs.Students.CreateStudentDto
+<h1>Create Student</h1>
+
+<form asp-action="Create"
+      asp-controller="StudentsMvc"
+      method="post">
+
+    <div>
+        <label asp-for="Name"></label><br />
+        <input asp-for="Name" />
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Age"></label><br />
+        <input asp-for="Age" />
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Email"></label><br />
+        <input asp-for="Email" />
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="UniversityId"></label><br />
+        <input asp-for="UniversityId" />
+    </div>
+
+    <br />
+
+    <button type="submit">Create</button>
+</form>
+
+<br />
+
+<a asp-action="Index">Back to Students</a>
